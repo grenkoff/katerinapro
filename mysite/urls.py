@@ -14,8 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import path, include
+
+from pages.views import page_not_found
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', include('admin_honeypot.urls', namespace='admin_honeypot')),
+    path('theboss/', admin.site.urls),
+    path("", include("pages.urls", namespace='pages')),
 ]
+
+handler404 = page_not_found
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
