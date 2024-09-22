@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+  <div class="main-content">
+    <h1>404 - Страница не найдена</h1>
+    <p>Извините, но страница, которую вы ищете, не существует.</p>
+    <a href="{% url 'pages:home' %}">Вернуться на главную</a>
+  </div>
+{% endblock content %}

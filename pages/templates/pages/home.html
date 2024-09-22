@@ -1,0 +1,288 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  {{ home_view.title }}
+{% endblock %}
+
+
+{% block content %}
+  <section class="modal fade" tabindex="-1" id="callback">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Заказать обратный звонок</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="#">
+            <div class="row g-2">
+              <div class="col-sm-6">
+                <div class="form-floating">
+                  <input id="name1" type="name" class="form-control" placeholder="Ваше имя">
+                  <label for="name1">Ваше имя</label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-floating">
+                  <input id="phone1" type="phone" class="form-control" placeholder="Номер телефона">
+                  <label for="phone1">Номер телефона</label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button> -->
+          <button type="button" class="btn btn-primary">Отправить</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active c-item">
+        <img src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 c-img" alt="Slide One">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="fs-3 mt-5">Ландшафтный проект под ключ</p>
+          <p class="display-1 fw-bolder">Раз, два и готово</p>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#callback">Узнать стоимость</button>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="https://images.unsplash.com/photo-1490187763999-9f273a5b7516?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 c-img" alt="Slide Two">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="fs-3 mt-5">Консультация специалиста</p>
+          <p class="display-1 fw-bolder">Онлайн и по телефону</p>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#callback">Узнать стоимость</button>
+        </div>
+      </div>
+      <div class="carousel-item c-item">
+        <img src="https://images.unsplash.com/photo-1669024808541-71f502ac6e42?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 c-img" alt="Slide Three">
+        <div class="carousel-caption top-0 mt-4">
+          <p class="fs-3 mt-5">Выезд на участок</p>
+          <h1 class="display-1 fw-bolder">На следующий день</h1>
+          <button class="btn btn-primary px-4 py-2 fs-5 mt-5" data-bs-toggle="modal" data-bs-target="#callback">Узнать стоимость</button>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#hero-carousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#hero-carousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </section>
+  <section class="overview">
+    <div class="container h-100 d-flex align-items-center">
+      <div class="row w-100 text-center fs-4">
+        <div class="col-lg mb-3">
+          <i class="bi bi-bag-check-fill me-2"></i>
+          18 лет опыта работы
+        </div>
+        <div class="col-lg mb-3">
+          <i class="bi bi-wallet-fill me-2"></i>
+          Гарантия 12 месяцев
+        </div>
+        <div class="col-lg">
+          <i class="bi bi-patch-check-fill me-2"></i>
+          200+ довольных клиентов
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="about" class="pt-md-5">
+    <h2 class="text-center my-5">Обо мне</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 mb-3 mb-lg-0">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <h3 class="my-5">Преимущества работы со мной</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Lorem ipsum dolor sit amet</li>
+            <li class="list-group-item">consectetur adipiscing elit</li>
+            <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</li>
+            <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+            <li class="list-group-item">Ut enim ad minim veniam</li>
+            <li class="list-group-item">Lorem ipsum dolor sit amet</li>
+            <li class="list-group-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+            <li class="list-group-item">sed do eiusmod tempor incididunt</li>
+            <li class="list-group-item">ut labore et dolore magna aliqua</li>
+          </ul>
+        </div>
+        <div class="col-lg-4 mb-3 mb-lg-0">
+          <img src="https://images.unsplash.com/photo-1726310722422-21d60f2c3e38?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded float-start d-block w-100" alt="Екатерина Прокофьева">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="portfolio" class="pt-md-5">
+    <h2 class="text-center my-5">Портфолио</h2>
+    <div class="container">
+      <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+          <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active c-item" data-bs-interval="10000">
+            <img src="https://www.aacc.edu/media/college/images/areas-of-study/architecture/Landscape-Architecture_shutterstock_366207515_1200x600_optimzed.jpg" class="d-block w-100" alt="">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item c-item" data-bs-interval="2000">
+            <img src="https://sochi.ru/upload/iblock/8af/8af8c2a39f6fc17a9ace9deeb06db684.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="https://i.pinimg.com/originals/ea/a3/54/eaa3543f0698f2ac6c4b6b979e44475a.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="https://static.tildacdn.com/tild6139-3530-4166-a432-386161616437/photo.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fourth slide label</h5>
+              <p>Some representative placeholder content for the Fourth slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="https://i.pinimg.com/originals/71/99/c5/7199c585c06c9cfe0eb1e1923c9d7dfd.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Fifth slide label</h5>
+              <p>Some representative placeholder content for the Fifth slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="https://avatars.mds.yandex.net/i?id=910a59a3b964e3e482a27cfecaa13298_l-5222088-images-thumbs&n=13" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Sixth slide label</h5>
+              <p>Some representative placeholder content for the Sixth slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item c-item">
+            <img src="https://royalforest.com.ua/wp-content/uploads/2020/11/Vse-chto-nuzhno-dlya-sozdaniya-landshaftnogo-proekta-v-Kieve-Polnyy-proekt-landshaftnogo-dizayna-v-Kieve-vse-dokumenty-po-landshaftnomu-proektu-v-Kieve-scaled.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Seventh slide label</h5>
+              <p>Some representative placeholder content for the Seventh slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section id="order" class="pt-md-5">
+    <h2 class="text-center my-5">Заказать услугу</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 mb-3 mb-lg-0">
+          <div class="card border border-2">
+            <div class="card-body">
+              <h5 class="card-title">Выезд на участок</h5>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callback">Заказать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-3 mb-lg-0">
+          <div class="card border border-2 border-success">
+            <div class="card-body">
+              <h5 class="card-title">Ландшафтный проект</h5>
+              <span class="badge text-bg-info mb-3">Популярная услуга</span>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#callback">Заказать</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card border border-2">
+            <div class="card-body">
+              <h5 class="card-title">Консультация специалиста</h5>
+              <span class="badge text-bg-info mb-3">Это бесплатно</span>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#callback">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="faq" class="pt-md-5">
+    <h2 class="text-center my-5">Вопрос-Ответ</h2>
+    <div class="container">
+      <div class="accordion w-75 mx-auto" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Как прекрасен этот мир?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Этот мир прекрасен во множестве мелочей</strong> — от утреннего солнца, пробивающегося сквозь деревья, до бескрайних звездных небес. Каждый момент может быть наполнен красотой, если обратить внимание на детали.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Куда Марк Шагал?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Марк Шагал</strong> — один из самых известных художников XX века, чьи работы впитали элементы сюрреализма, фовизма и кубизма, но при этом он создал уникальный стиль, переполненный символизмом и яркими, мечтательными образами. Он родился в Витебске и с самого начала был связан с еврейской культурой и традициями своего народа.
+
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Если платишь за простой, то нужно ли платить за сложный?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Ваш вопрос интересен своей игрой слов.</strong> Если мы воспринимаем "платить за простой" буквально, как компенсацию за потерянное время или бездействие, то возникает мысль: а нужно ли платить за сложное, то есть за что-то требующее усилий и навыков?
+
+                Ответ может зависеть от контекста. Если речь идет о бизнесе или работе, сложные задачи обычно оцениваются выше из-за их трудоёмкости, а значит, за них платят больше. Однако, в философском смысле можно рассуждать, что как за простоту, так и за сложность приходится платить, просто "цена" у них разная: за простое — потерянное время или возможность, а за сложное — усилия и вложенные ресурсы.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <h1>{{ home_view.title }}</h1>
+  {{ home_view.description|safe }}
+  <button class="btn btn-primary">Hi there!</button> -->
+{% endblock %}
